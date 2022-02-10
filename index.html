@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script>
+	 <script src="jsonbiologi.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+	 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/@hackmd/lz-string@1.4.4/libs/lz-string.min.js"></script>
+	 
+
+
+    <title>Informasi Tambahan Ujian Praktik Biologi</title>
+  </head>
+  <body>
+
+<div class="container">
+	
+  <div class="alert alert-success" role="alert" style="text-align:center"><span><!--<img src="https://absen.sman81jkt.sch.id/81.svg" height="24">-->
+		</span><span><h3><strong>Informasi Tambahan Ujian Praktik Biologi</strong></h3></span>
+
+  </div>
+    
+	<div class="row"> 
+	
+	
+	<div class="col-md-12 col-12">
+	<div class="alert alert-primary" role="alert" ><span><!--<img src="https://absen.sman81jkt.sch.id/81.svg" height="24">-->
+	<h4>Penting! </h4>
+  1. Peserta on cam selama melakukan ujian praktik. 
+  <br> 2. LKPD ditulis dengan tulisan tangan.
+  <br> 3. Absen di <a href="https://absen.sman81jkt.sch.id"> Link Presensi </a> sebelum pukul 07.00 WIB
+  <br> 4. Laporan wajib dalam bentuk PDF
+  <br> 5. Pengumpulan di <a href="http://116.197.134.14/mod/assign/view.php?id=1145" target="_blank"> <img src="../img/send.png" height="20px"> 
+Link Upload LKPD Uprak Biologi  </a>
+	</div>
+	</div>
+	<div class="col-md-12 col-12">
+	<input type="text" id="token" class="form-control" placeholder="Ketik 5 Digit Token, Enter" autocomplete="off"   pattern="[A-Za-z0-9]+">
+	</div>
+	</div>	
+	<div class="row" id="sembunyi" style="visibility:hidden;" >
+	<div class="form-group col-md-6" >
+	<p><hr>
+	<p> Unduh File Ujian Praktik (tema random) </p>
+				<label for="nama">Pilih Nama Lengkap</label>
+				<input type="text" id="nama" class="form-control" placeholder="ketik min 3 huruf, lalu pilih" autocomplete="off"  >
+				<br>
+				<button class="btn btn-primary" href="yey.html" onclick="munculDownload()">Tampilkan Download</button> 
+				<br> <br>
+				<a style="visibility:hidden; color:blue" id="download"   href="" ><?xml version="1.0" encoding="utf-8"?>
+<svg width="24" height="24" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1344 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm256 0q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm128-224v320q0 40-28 68t-68 28h-1472q-40 0-68-28t-28-68v-320q0-40 28-68t68-28h465l135 136q58 56 136 56t136-56l136-136h464q40 0 68 28t28 68zm-325-569q17 41-14 70l-448 448q-18 19-45 19t-45-19l-448-448q-31-29-14-70 17-39 59-39h256v-448q0-26 19-45t45-19h256q26 0 45 19t19 45v448h256q42 0 59 39z"/></svg>Download Judul Percobaan </a><br><br><br>
+    </div>
+	</div>
+    	
+	
+        
+</div>
+  </body>
+	
+	<footer class="alert-primary">
+  Made with <svg height="16" viewBox="0 0 24 24" width="16"><path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" fill="#B71C1C"></path></svg> from <img src="https://absen.sman81jkt.sch.id/81.svg" height="16"></br>
+  </footer>
+   
+ 
+<style>
+video {
+  width: 100% !important;
+  height: auto !important;
+}
+   .signature-pad{
+   border: 1px solid #acacac;
+   }
+	footer{
+	font-size: 0.8em;
+	text-align:center;
+	width: 100%;
+	margin:auto;
+	}
+	.ui-autocomplete {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+      display: none;
+      float: left;
+      min-width: 160px;
+      padding: 5px 0;
+      margin: 2px 0 0;
+      list-style: none;
+      font-size: 14px;
+      text-align: left;
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+      background-clip: padding-box;
+    }
+
+    .ui-autocomplete > li > div {
+      display: block;
+      padding: 3px 20px;
+      clear: both;
+      font-weight: normal;
+      line-height: 1.42857143;
+      color: #333333;
+      white-space: nowrap;
+    }
+
+    .ui-state-hover,
+    .ui-state-active,
+    .ui-state-focus {
+      text-decoration: none;
+      color: #262626;
+      background-color: #f5f5f5;
+      cursor: pointer;
+    }
+
+    .ui-helper-hidden-accessible {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+   </style>
+   
+  <script>
+  
+ $("#token").keyup(function(event) {
+    if (event.keyCode === 13) {
+        if($("#token").val(). toUpperCase()=="BIO81"){
+		document.getElementById("sembunyi").style="visibility:show";
+		}
+		else{
+		alert("token salah!");
+		}
+    }
+}); 
+  
+ var namaSiswa=[];
+   for(var i =0; i<bio.length; i++){
+    namaSiswa[i]=bio[i].nama;}
+$("#nama").autocomplete({
+          source: namaSiswa, minLength:3
+       		});
+
+
+
+function munculDownload(){
+if(document.getElementById("nama").value==""){
+alert("pilih nama dulu");
+
+}
+else{
+   var idx = bio.findIndex(biol=>biol.nama == document.getElementById("nama").value);
+   console.log(idx);
+   document.getElementById("download").style="visibility:show";
+   document.getElementById("download").href="../info"+bio[idx].paket;
+   document.getElementById("download").download="../info"+bio[idx].paket;
+  // document.getElementById("download").href="yey.html";
+   }
+}
+
+
+ </script>
+</html>
+
+
+
